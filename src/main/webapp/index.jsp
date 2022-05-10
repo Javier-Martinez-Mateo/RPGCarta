@@ -11,11 +11,15 @@
 <body>
 <h1>Carta</h1>
 <form action="doc.jsp" method="post">
+<label for="usuario">Usuario:</label>
+<input id="usuario" type="text" name="usuario" />
  <input type="submit" name="enviar" value="Crear Carta"/>
 </form>
 <br>
 <form action="paginacio.jsp?pagina=0" method="post">
- <input type="submit" name="enviar" value="Ver carta"/>
+<label for="usuario">Usuario:</label>
+<input id="usuario" type="text" name="usuario" />
+<input type="submit" name="enviar" value="Ver carta"/>
 </form>
 </body>
 </html>

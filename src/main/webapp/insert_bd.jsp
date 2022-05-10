@@ -22,6 +22,7 @@
 	ResultSet rs = null;
 
 	// recollim valors formulari:
+	String usuario = request.getParameter("usuario");
 	String nombre = request.getParameter("nombre");
 	String race = request.getParameter("race");
 	String picture = request.getParameter("picture");
@@ -49,8 +50,8 @@
 		statement = conn.createStatement();
 		//inmediatamente hacemos un insert amb les dades
 		//creamos la consulta
-		int i = statement.executeUpdate("insert into carta(nombre,picture,race,fue,des,con,intel,sab,car,pv,pm)values('"
-		+ nombre + "','" + picture + "','" + race + "'," + nfue + "," + ndes + "," + ncon + "," + nint + "," + nsab
+		int i = statement.executeUpdate("insert into carta(nombre,user,picture,race,fue,des,con,intel,sab,car,pv,pm)values('"
+		+ nombre + "','" + usuario + "','"+ picture + "','" + race + "'," + nfue + "," + ndes + "," + ncon + "," + nint + "," + nsab
 		+ "," + ncar + "," + npv + "," + npm + ")");
 	%>
 	<div id="centrar">

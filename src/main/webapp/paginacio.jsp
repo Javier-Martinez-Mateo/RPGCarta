@@ -11,13 +11,14 @@
 </head>
 <h1 class="titol">Visualitzar cartes</h1>
 <ul class="breadcrumb">
-	<li><a href="inicio.jsp">Inici</a></li>
+	<li><a href="index.jsp">Inici</a></li>
 	<li>Visualitzar cartes</li>
 </ul>
 <br>
 <br>
 <%
 //  variables per fer la connexio:
+String usuario = request.getParameter("usuario");
 String user = "carta";
 String password = "1234";
 String host = "localhost";
@@ -50,7 +51,7 @@ conn = DriverManager.getConnection(url, user, password);
 num_registres = conn.createStatement();
 //inmediatamente hacemos una consulta sencilla
 //creamos la consulta
-num_reg = num_registres.executeQuery("SELECT * FROM carta");
+num_reg = num_registres.executeQuery("SELECT * FROM carta where user='"+usuario+"'");
 int num_total_registros = 0;
 while (num_reg.next()) {
 	num_total_registros++;
@@ -125,6 +126,9 @@ out.print(rs.getString("race"));
 		</div>
 		<div>
 			<%out.print(rs.getString("nombre"));%>
+		</div>
+		<div>
+			<%out.print(rs.getString("user"));%>
 		</div>
 		<div>
 			FUE:<%
