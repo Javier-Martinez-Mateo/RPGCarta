@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="css/styles.css" type="text/css" />
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -20,6 +21,7 @@
 <label for="usuario">Usuario:</label>
 <input id="usuario" type="text" name="usuario" />
 <input type="submit" name="enviar" value="Ver carta"/>
+<div class="g-recaptcha" data-sitekey="6LcSOKwaAAAAAJgVissf4b74UqaAoHh-XVkSHloy"></div>
 </form>
 </body>
 </html>
