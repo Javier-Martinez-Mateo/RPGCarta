@@ -20,9 +20,10 @@
 	Connection conn = null;
 	Statement statement = null;
 	ResultSet rs = null;
-
+	
 	// recollim valors formulari:
 	String usuario = request.getParameter("usuario");
+	String passwd = request.getParameter("passwd");
 	String nombre = request.getParameter("nombre");
 	String race = request.getParameter("race");
 	String picture = request.getParameter("picture");
@@ -42,16 +43,14 @@
 	int npv = Integer.parseInt(pv);
 	String pm = request.getParameter("mana");
 	int npm = Integer.parseInt(pm);
-
 	try {
-
 		Class.forName("com.mysql.jdbc.Driver").newInstance();
 		conn = DriverManager.getConnection(url, user, password);
 		statement = conn.createStatement();
 		//inmediatamente hacemos un insert amb les dades
 		//creamos la consulta
-		int i = statement.executeUpdate("insert into carta(nombre,user,picture,race,fue,des,con,intel,sab,car,pv,pm)values('"
-		+ nombre + "','" + usuario + "','"+ picture + "','" + race + "'," + nfue + "," + ndes + "," + ncon + "," + nint + "," + nsab
+		int i = statement.executeUpdate("insert into carta(id_user,picture,nombre,race,fue,des,con,intel,sab,car,pv,pm)values('"
+		+ nombre + "','" + usuario + ",'"+ picture + "','" + race + "'," + nfue + "," + ndes + "," + ncon + "," + nint + "," + nsab
 		+ "," + ncar + "," + npv + "," + npm + ")");
 	%>
 	<div id="centrar">

@@ -106,6 +106,8 @@
 	String[] race = { "Elfs", "Nans", "Gnoms", "Mitjans", "Semiorcs", "Humans" };
 	String[] race_picture = { "0", "1", "2", "3", "4", "5" };
 	String usuario = request.getParameter("usuario");
+	String passwd = request.getParameter("passwd");
+
 
 	int race_random = (int) (Math.random() * race.length);
 	%>
@@ -272,6 +274,7 @@
 		<label for="nombre">Nombre:</label>
 		<input type="text" id="nombre" name="nombre"/>
 		 <input type="hidden" name="usuario" value="<%out.print(usuario);%>" />
+		 <input type="hidden" name="passwd" value="<%out.print(passwd);%>" />
  		<input type="hidden" name="picture" value="<%out.print(race_picture[race_random]);%>" />
  		<input type="hidden" name="race" value="<%out.print(race[race_random]);%>" />
  		<input type="hidden" name="fue" value="<%out.print(fue);%>" />
