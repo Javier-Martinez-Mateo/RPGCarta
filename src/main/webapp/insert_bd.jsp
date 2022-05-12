@@ -49,7 +49,7 @@
 		statement = conn.createStatement();
 		//inmediatamente hacemos un insert amb les dades
 		//creamos la consulta
-		int i = statement.executeUpdate("insert into carta(id_user,picture,nombre,race,fue,des,con,intel,sab,car,pv,pm)values('"
+		int i = statement.executeUpdate("insert into carta(nombre,id_user,picture,nombre,race,fue,des,con,intel,sab,car,pv,pm)values('"
 		+ nombre + "','" + usuario + ",'"+ picture + "','" + race + "'," + nfue + "," + ndes + "," + ncon + "," + nint + "," + nsab
 		+ "," + ncar + "," + npv + "," + npm + ")");
 	%>
