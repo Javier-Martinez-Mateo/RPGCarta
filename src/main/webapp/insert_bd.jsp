@@ -53,7 +53,6 @@
 				+ nombre + "','" + usuario + "','"+ picture + "','" + race + "'," + nfue + "," + ndes + "," + ncon + "," + nint + "," + nsab
 				+ "," + ncar + "," + npv + "," + npm + ")");
 	%>
-	<p>cambios</p>
 	<div id="centrar">
 		<div id="cartap">
 			<div id="cabecera">
