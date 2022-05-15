@@ -11,7 +11,7 @@
 </head>
 <h1 class="titol">Visualitzar cartes</h1>
 <ul class="breadcrumb">
-	<li><a href="inicio.jsp">Inici</a></li>
+	<li><a href="index.jsp">Inici</a></li>
 	<li>Visualitzar cartes</li>
 </ul>
 <br>
