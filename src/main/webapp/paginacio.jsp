@@ -11,15 +11,13 @@
 </head>
 <h1 class="titol">Visualitzar cartes</h1>
 <ul class="breadcrumb">
-	<li><a href="index.jsp">Inici</a></li>
+	<li><a href="inicio.jsp">Inici</a></li>
 	<li>Visualitzar cartes</li>
 </ul>
 <br>
 <br>
 <%
 //  variables per fer la connexio:
-String usuario = request.getParameter("usuario");
-String passwd = request.getParameter("passwd");
 String user = "carta";
 String password = "1234";
 String host = "localhost";
@@ -52,8 +50,7 @@ conn = DriverManager.getConnection(url, user, password);
 num_registres = conn.createStatement();
 //inmediatamente hacemos una consulta sencilla
 //creamos la consulta
-num_reg = num_registres
-		.executeQuery("SELECT * from carta where id_user ='" + usuario+"';");
+num_reg = num_registres.executeQuery("SELECT * FROM carta");
 int num_total_registros = 0;
 while (num_reg.next()) {
 	num_total_registros++;
@@ -87,10 +84,9 @@ try {
 	statement = conn.createStatement();
 	//inmediatamente hacemos una consulta sencilla
 	//creamos la consulta
-	String sentence = "SELECT * from carta where id_user = '" + usuario+"'" 
-	+ "limit " + inicio + "," + TAMANO_PAGINA;
+	String sentence = "SELECT * from carta limit " + inicio + "," + TAMANO_PAGINA;
 	rs = statement.executeQuery(sentence);
-	//leemos lia consulta
+	//leemos la consulta
 	while (rs.next()) {
 		//mostramos los resultados obtenidos
 		//out.println(rs.getString("ID_carta"));
@@ -129,9 +125,6 @@ out.print(rs.getString("race"));
 		</div>
 		<div>
 			<%out.print(rs.getString("nombre"));%>
-		</div>
-		<div>
-			<%out.print(rs.getString("id_user"));%>
 		</div>
 		<div>
 			FUE:<%
