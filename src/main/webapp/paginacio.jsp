@@ -87,7 +87,7 @@ try {
 	statement = conn.createStatement();
 	//inmediatamente hacemos una consulta sencilla
 	//creamos la consulta
-	String sentence = "SELECT * from carta where id_user = '" + usuario+"'" 
+	String sentence = "SELECT * from carta where id_user ='" + usuario+"'"
 	+ "limit " + inicio + "," + TAMANO_PAGINA;
 	rs = statement.executeQuery(sentence);
 	//leemos lia consulta
