@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/styles.css" type="text/css" />
 </head>
 <body>
+<p>borrar</p>
 	<%
 	// variables per fer la connexio:
 	String user = "carta";
