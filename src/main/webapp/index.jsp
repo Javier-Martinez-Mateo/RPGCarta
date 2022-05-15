@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<p>no borrar</p>
 <h1>Carta</h1>
 <form action="doc.jsp" method="post">
  <input type="submit" name="enviar" value="Crear Carta"/>
