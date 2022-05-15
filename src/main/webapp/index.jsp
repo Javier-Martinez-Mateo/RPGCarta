@@ -10,7 +10,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p>borrar</p>
 <h1>Carta</h1>
 <form action="doc.jsp" method="post">
 <label for="usuario">Usuario:</label>

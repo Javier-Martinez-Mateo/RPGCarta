@@ -56,7 +56,6 @@
 	%>
 	<p>borrar luego </p>
 	<div id="centrar">
-	<p>ahora</p>
 		<div id="cartap">
 			<div id="cabecera">
 				<img src="img/<%out.print(picture);%>.png" height="100" width="80">
