@@ -54,7 +54,6 @@
 				+ nombre + "','" + usuario + "','" + picture + "','" + race + "'," + nfue + "," + ndes + "," + ncon
 				+ "," + nint + "," + nsab + "," + ncar + "," + npv + "," + npm + ")");
 	%>
-	<p>borrar luego </p>
 	<div id="centrar">
 		<div id="cartap">
 			<div id="cabecera">
